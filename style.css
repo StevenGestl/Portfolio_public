@@ -257,6 +257,8 @@ header {
 .hero {
     position: relative;
     height: 1200px;
+    display: flex;
+    justify-content: center;
 }
 
 .section__title--hero {
@@ -266,57 +268,105 @@ header {
     width: max-content;
     font-weight: var(--fw-reg);
     text-align: center;
-    top: 50%;
+    top: 40%;
+}
+
+.btn-container {
+    position: absolute;
+    display: inline-block;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 5px;
+    width: 100%;
+    top: 700px;
 }
 
 .hero-btn {
-    position: absolute;
+    position: relative;
     border: 2px;
     padding: 10px 25px;
-    display: inline;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 30%;
     left: 35%;
     right: 35%;
-    top: 50%;
+    top: 0%;
     cursor: pointer;
-    background-color: #16e0bd;
+    background-color: var(--clr-accent);
     text-decoration: none;
     font-size: 1.5em;
 }
 
 .hero-btn:hover {
     background-color: #303030;
-    color: white;
+    color: var(--clr-light);
 }
 
-.btn-container {
-    display: block;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: 5px;
-    width: auto;
-    top: 20px;
-}
-      
 
 
 
-
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .hero {
         display: grid;
         width: min-content;
         margin: 0 auto;
+        height: 680px;
         grid-column-gap: 1em;
         grid-template-areas:
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
     }
+
+    .section__title--hero {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: center;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+        top: 0;
+        font-size: 2em;
+    }
+
+    .btn-container {
+        position: absolute;
+        display: inline-block;
+        margin-left: 30%;
+        margin-right: 30%;
+        height: 5px;
+        width: 50%;
+        top: 415px;
+        left: -10%;
+    }
+
+    .hero-btn {
+        position: relative;       
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        background-color: var(--clr-accent);
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
 }
+
+@media (max-width: 768px) {
+
+    .hero-btn{
+        background-color: red;
+    }
+    
+}
+
 
 
 /* Intro section */
