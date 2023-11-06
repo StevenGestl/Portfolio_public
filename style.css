@@ -40,6 +40,8 @@
 
 /* general styles  */
 
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -297,11 +299,14 @@ header {
     background-color: var(--clr-accent);
     text-decoration: none;
     font-size: 1.5em;
+    transition: transform 200ms ease-in-out;
 }
 
 .hero-btn:hover {
     background-color: #303030;
     color: var(--clr-light);
+    transform: scale(1.1);
+
 }
 
 
@@ -344,7 +349,7 @@ header {
     }
 
     .hero-btn {
-        position: relative;       
+        position: relative;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -359,13 +364,7 @@ header {
 
 }
 
-@media (max-width: 768px) {
-
-    .hero-btn{
-        background-color: red;
-    }
-    
-}
+@media (max-width: 768px) {}
 
 
 
@@ -415,61 +414,18 @@ header {
     }
 }
 
-/* My services section */
 
-.my-services {
-    background-color: var(--clr-dark);
-    background-image: url(img/serviceslaptop-bg.jpg);
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-}
-
-.section__title--services {
-    color: var(--clr-accent);
-    position: relative;
-
-}
-
-.section__title--services::after {
-    content: '';
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
-}
-
-.services {
-    margin-bottom: 4em;
-}
-
-.service {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-@media (min-width: 800px) {
-    .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .service+.service {
-        margin-left: 2em;
-    }
-}
 
 
 
 /* About me section */
 
+
 .about-me {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 .about-me__img {
@@ -505,6 +461,60 @@ header {
         grid-area: img;
         position: relative;
         z-index: 2;
+    }
+}
+
+/* My services section */
+
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(img/serviceslaptop-bg.jpg);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.skill-div {
+    border: 2px var(--clr-accent);
+    border-radius: 4px;
+    width: 50%;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service+.service {
+        margin-left: 2em;
     }
 }
 
@@ -612,11 +622,13 @@ header {
     font-size: 3rem;
     font-family: "Play", sans-serif;
 }
-.four .type{
+
+.four .type {
     padding: 2rem 1rem;
     width: auto;
     margin: auto;
 }
+
 .four h3 {
     width: 13ch;
     border-right: 4px solid black;
@@ -625,5 +637,3 @@ header {
     overflow: hidden;
     animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
 }
-
-
