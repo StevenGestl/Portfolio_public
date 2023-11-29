@@ -331,7 +331,7 @@ header {
         grid-row: 2;
         text-align: center;
         position: relative;
-        left: -1.5em;
+        left: -1em;
         width: calc(100% + 1.5em);
         top: 0;
         font-size: 2em;
@@ -355,7 +355,7 @@ header {
         align-items: center;
         text-align: center;
         width: 100%;
-        left: 0%;
+        left: 5%;
         top: 0%;
         background-color: var(--clr-accent);
         text-decoration: none;
@@ -499,12 +499,6 @@ header {
     margin: 0 auto;
 }
 
-.skill-div {
-    border: 2px var(--clr-accent);
-    border-radius: 4px;
-    width: 50%;
-}
-
 @media (min-width: 800px) {
     .services {
         display: flex;
@@ -515,6 +509,60 @@ header {
 
     .service+.service {
         margin-left: 2em;
+    }
+}
+
+
+/* Skill section */
+
+.section__title--skills{
+    background-color: #16e0bd;
+    display: block;
+    top: 0;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.all-skills-div {
+    position: relative;
+    column-count: 2;
+    column-gap: 10%;
+    column-rule: 2px solid var(--clr-accent);
+   width: 100%;
+   column-width: 100%;
+   text-align: center;
+}
+
+.skill-div {
+    position: relative;
+    border: 2px var(--clr-accent);
+    border-radius: 4px;
+    width: 100px;
+    border-style: solid;
+    height: 100px;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-bottom: 10%;
+}
+
+@media (max-width: 600px) {
+
+
+    .all-skills-div {
+        position: relative;
+        column-count: 1;
+       width: 100%;
+      
+    }
+
+    .skill-div {
+        position: relative;
+        border: 2px var(--clr-accent);
+        border-radius: 4px;
+        width: 100px;
+        border-style: solid;
+        height: 100px;
+        margin-left: 35%;
     }
 }
 
